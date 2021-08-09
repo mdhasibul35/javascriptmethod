@@ -126,4 +126,19 @@ var watchList = [
   }
   console.log(getRating(watchList));
 
-  
+
+//Use reduce to find the average IMDB rating of the movies directed by Christopher Nolan. 
+
+  function getRatings(watchList){
+    let count=0;
+    var averageRating=watchList.reduce((sum,movie)=>{
+      if(movie["Director"]=="Christopher Nolan"){
+       count++;
+      return sum+parseFloat(movie.imdbRating);
+      }
+      return sum;
+    },0
+    )/count;
+    return averageRating;
+  }
+  console.log(getRatings(watchList));
