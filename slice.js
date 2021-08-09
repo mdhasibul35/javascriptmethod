@@ -14,3 +14,10 @@ function sliceArray(anim, beginSlice, endSlice) {
   }
   var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
   console.log(sliceArrayWithout(inputAnim, 1, 4));
+
+  //slice example-2
+  function nonMutatingSplice(cities) {
+    return cities.slice(0,3);
+  }
+  var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+  console.log(nonMutatingSplice(inputCities));
